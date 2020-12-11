@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+//Test
 /**
  * Erstellt einen kleinen Taschenrechner.
  */
@@ -93,13 +93,13 @@ class CalculatorPanel extends JPanel {
 	}
 
 	/**
-	 * Diese Aktion führt den mit der Taste verbundenen Befehl aus.
+	 * Diese Aktion fÃ¼hrt den mit der Taste verbundenen Befehl aus.
 	 */
 	private class CommandAction implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
 			String command = event.getActionCommand();
 
-			// Füge den Präfix "-" an den String an wenn
+			// FÃ¼ge den PrÃ¤fix "-" an den String an wenn
 			// es sich um den ersten Befehl handelt (negative Zahl)
 			if (start) {
 				if (command.equals("-")) {
@@ -108,7 +108,7 @@ class CalculatorPanel extends JPanel {
 				} else
 					lastCommand = command;
 			} else {
-				// Berechnung ausführen
+				// Berechnung ausfÃ¼hren
 				calculate(Double.parseDouble(display.getText()));
 				lastCommand = command;
 				start = true;
@@ -117,7 +117,7 @@ class CalculatorPanel extends JPanel {
 	}
 
 	/**
-	 * Führt die anstehenden Berechnungen aus.
+	 * FÃ¼hrt die anstehenden Berechnungen aus.
 	 * 
 	 * @param x der mit dem vorherigen Ergebnis zu berechnende Wert
 	 */
